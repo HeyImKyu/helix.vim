@@ -25,6 +25,10 @@ nnoremap j j
 nnoremap k k
 xnoremap j <Esc>j
 xnoremap k <Esc>k
+nnoremap <C-Up> 18k
+nnoremap <C-Down> 18j
+xnoremap <C-Up> <Esc>18k
+xnoremap <C-Down> <Esc>18j
 " TODO: check select mode case
 
 " Workarounds for `> bugs
@@ -32,7 +36,7 @@ xnoremap k <Esc>k
 " https://github.com/VsVim/VsVim/issues/3065
 xnoremap a <Esc>`>ha
 xnoremap <A-:> <Esc>`<v`>h
-xnoremap p <Esc>`>hpgv
+xnoremap P <Esc>`>hpgv
 xnoremap R "_d""P`[v`]h
 xnoremap ms( <Esc>`<i(<Esc>ma`>a)<Esc>mb`av`b
 xnoremap ms) <Esc>`<i(<Esc>ma`>a)<Esc>mb`av`b
@@ -60,9 +64,14 @@ xnoremap ms<Bar> <Esc>`<i<Bar><Esc>ma`>a<Bar><Esc>mb`av`b
 noremap <C-6> <Esc>:vsc Window.NextDocumentWindowNav<CR>
 noremap <C-O> <Esc>:vsc View.NavigateBackward<CR>
 noremap <C-I> <Esc>:vsc View.NavigateForward<CR>
+noremap <C-p> <Esc>:vsc View.NavigateBackward<CR>
+noremap <C-n> <Esc>:vsc View.NavigateForward<CR>
 noremap <A-O> :vsc Edit.ExpandSelection<CR>
 noremap <A-I> :vsc Edit.ContractSelection<CR>
 map = :vsc Edit.FormatSelection<CR>
+
+" Window mode
+noremap <Space>wh <Esc>:vsc Window.Split<CR>
 
 
 " Goto mode

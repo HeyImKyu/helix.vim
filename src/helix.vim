@@ -60,6 +60,19 @@ xnoremap <C-u> <Esc><C-u>v
 xnoremap <C-d> <Esc><C-d>v
 xnoremap <C-i> <Esc><C-i>v
 xnoremap <C-o> <Esc><C-o>v
+nnoremap <C-n> <C-i>
+nnoremap <C-p> <C-o>
+xnoremap <C-n> <Esc><C-i>v
+xnoremap <C-p> <Esc><C-o>v
+map <C-Left> b
+map <C-Right> e
+" 18 lines is what a repeated move_visual_line in the helix config amounts to
+nnoremap <C-Up> 18gk
+nnoremap <C-Down> 18gj
+xnoremap <C-Up> <Esc>18gk
+xnoremap <C-Down> <Esc>18gj
+inoremap <C-Up> <C-o>18gk
+inoremap <C-Down> <C-o>18gj
 nnoremap j gj
 nnoremap k gk
 
@@ -81,6 +94,8 @@ xnoremap o <Esc>`>o <BS>
 nnoremap o o <BS>
 xnoremap O <Esc>`<O <BS>
 nnoremap O O <BS>
+nnoremap <CR><CR> i<CR><Esc>j^
+xnoremap <CR><CR> <Esc>`<i<CR><Esc>j^
 xnoremap . <Esc>`<.
 nnoremap . .
 xnoremap u <Esc>uv
@@ -91,8 +106,10 @@ noremap <A-u> gv
 xnoremap <A-U> <Esc><C-R>v
 xnoremap y ygv
 nnoremap y vy
-xnoremap p <Esc>`>pgv
-xnoremap P <Esc>`<Pgv
+xnoremap p <Esc>`<Pgv
+xnoremap P <Esc>`>pgv
+nnoremap p P
+nnoremap P p
 " TODO: why don't the register work properly?
 xnoremap " "
 nnoremap " v"
@@ -288,17 +305,18 @@ nnoremap mim v<Esc>`>f)mb`>]`v%
 
 " Window mode
 noremap <Space>w <C-w>
+noremap <Space>wh <C-w>s
 
 " Space mode
 " TODO: almost nothing is supported out of the box
 " TODO: investigate select pasted text?
-xnoremap <Space>p <Esc>"*p
-xnoremap <Space>P <Esc>"*P
+xnoremap <Space>p <Esc>"*P
+xnoremap <Space>P <Esc>"*p
 xnoremap <Space>y "*yg
 xnoremap <Space>Y "*yg
 xnoremap <Space>R "*p
-nnoremap <Space>p "*p
-nnoremap <Space>P "*P
+nnoremap <Space>p "*P
+nnoremap <Space>P "*p
 nnoremap <Space>y v"*y
 nnoremap <Space>Y v"*y
 nnoremap <Space>R v"*pv
