@@ -1,3 +1,4 @@
 # IDEA project directory
 .idea
+.vscode
 helix.vim.iml
