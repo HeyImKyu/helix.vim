@@ -492,6 +492,14 @@ nnoremap <Space>P "*P
 nnoremap <Space>y v"*y
 nnoremap <Space>Y v"*y
 nnoremap <Space>R v"*pv
+nnoremap <Space>s :w<CR>
+xnoremap <Space>s <Esc>:w<CR>gv
+nnoremap <Space>S :w!<CR>
+xnoremap <Space>S <Esc>:w!<CR>gv
+noremap <Space>q <Esc>:q<CR>
+noremap <Space>Q <Esc>:q!<CR>
+noremap <Space>x <Esc>:x<CR>
+noremap <Space>X <Esc>:x!<CR>
 
 " Unimpaired / Bracket mode
 " TODO

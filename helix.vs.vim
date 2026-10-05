@@ -492,6 +492,14 @@ nnoremap <Space>P "*P
 nnoremap <Space>y v"*y
 nnoremap <Space>Y v"*y
 nnoremap <Space>R v"*pv
+nnoremap <Space>s :w<CR>
+xnoremap <Space>s <Esc>:w<CR>gv
+nnoremap <Space>S :w!<CR>
+xnoremap <Space>S <Esc>:w!<CR>gv
+noremap <Space>q <Esc>:q<CR>
+noremap <Space>Q <Esc>:q!<CR>
+noremap <Space>x <Esc>:x<CR>
+noremap <Space>X <Esc>:x!<CR>
 
 " Unimpaired / Bracket mode
 " TODO
@@ -1540,8 +1548,10 @@ xnoremap <Space>Y "*ygv
 noremap <space>k :vsc Edit.QuickInfo<CR>
 noremap <space>a :vsc View.QuickActions<CR>
 noremap <space>/ :vsc Edit.FindInFiles<CR>
-noremap <space>S :vsc Edit.GoToSymbol<CR>
 noremap <space>f :vsc Edit.GoToFile<CR>
+" VsVim has no :x
+noremap <space>x <Esc>:wq<CR>
+noremap <space>X <Esc>:wq!<CR>
 noremap <space>r :vsc Refactor.Rename<CR>
 noremap <space>D :vsc View.ErrorList<CR>
 noremap <space>c :vsc Edit.ToggleLineComment<CR>

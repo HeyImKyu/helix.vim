@@ -79,8 +79,10 @@ xnoremap <Space>Y "*ygv
 noremap <space>k :vsc Edit.QuickInfo<CR>
 noremap <space>a :vsc View.QuickActions<CR>
 noremap <space>/ :vsc Edit.FindInFiles<CR>
-noremap <space>S :vsc Edit.GoToSymbol<CR>
 noremap <space>f :vsc Edit.GoToFile<CR>
+" VsVim has no :x
+noremap <space>x <Esc>:wq<CR>
+noremap <space>X <Esc>:wq!<CR>
 noremap <space>r :vsc Refactor.Rename<CR>
 noremap <space>D :vsc View.ErrorList<CR>
 noremap <space>c :vsc Edit.ToggleLineComment<CR>
