@@ -598,7 +598,9 @@ xmap vms<Bar> ms<Bar>
 noremap ZV V
 map x ZVv
 xmap vx Zjv
-noremap X 0V
+" X is the counterpart of x: it takes the last x back, and extends upwards once at the top
+map X ZVZkv
+xmap vX Zkv
 " In extend mode, make sure that f/t/F/T stays in extend mode
 " Every key stroke x needs the following pair of maps
 " xnoremap Zfx fx
